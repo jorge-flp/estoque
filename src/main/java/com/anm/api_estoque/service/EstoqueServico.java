@@ -1,5 +1,7 @@
 package com.anm.api_estoque.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,8 @@ public class EstoqueServico {
         return er.findAll(); 
     }
 
+    public Optional<ProdutoModelo> buscarProduto(Long id) {
+        return er.findById(id);
+    }
 
 }
